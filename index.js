@@ -1,7 +1,10 @@
-const axios = require('axios')
-const { log } = require('node:console')
+const app = require('./src/server')
 
-axios('https://jsonplaceholder.typicode.com/users')
-.then(response => console.log(response.data))
-.catch(err => console.error(err))
+require ('dotenv').config({quiet: true})
+
+const port = process.env.PORT || 3000
+
+app.listen(port, () => {
+  console.log(`listening on port ${port}`)
+})
 
