@@ -5,10 +5,10 @@ const {Router} = require('express')
 const mainRoute = Router ()
 
 // Ruta de usuarios
-mainRoute.use("/users", userRoute)
+mainRoute.use('/users', userRoute)
 
 // Ruta de productos
-mainRoute.use("/products", productsRoute)
+mainRoute.use('/products', productsRoute)
 
 
 module.exports = mainRoute
